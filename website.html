@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "nav nav"
+            "main sidebar"
+            "footer footer";
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto 1fr auto;
+            gap: 10px;
+            min-height: 100vh;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+
+        .nav {
+            grid-area: nav;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        .nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .aside {
+            grid-area: sidebar;
+            background-color: #e3e3e3;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">My Website</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">content</a>
+        </div>
+    <div class="main">
+        <h2>Welcome to My Page</h2>
+        <p>This is the main content area. CSS Grid makes layout easy and responsive</p>
+    </div>
+    <div class="aside">
+        <h3>Sidebar</h3>
+        <p>Extra content or ads go here</p>
+    </div>
+    <div class="Footer">&copy; 2025 My Website</div>
+    </div>
+</body>
+</html>
